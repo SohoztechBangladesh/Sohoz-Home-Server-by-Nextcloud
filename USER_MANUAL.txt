@@ -1,0 +1,180 @@
+================================================================================
+                    SOHOZ HOME SERVER - USER MANUAL & GUIDE
+         The Private Alternative to Google Drive, OneDrive & iCloud Drive
+                 Publisher: Sohoztech Software Solutions Bangladesh
+                            Developer: Rakib Mollah
+================================================================================
+
+1. INTRODUCTION & PRODUCT OVERVIEW
+----------------------------------
+Sohoz Home Server is a high-performance, private, self-hosted cloud storage 
+platform running natively on 64-bit Windows 10 and Windows 11. It provides a 
+complete, subscription-free alternative to corporate cloud services such as 
+Google Drive, Microsoft OneDrive, and Apple iCloud Drive.
+
+With Sohoz Home Server, you retain 100% physical ownership and privacy of your data:
+- No Recurring Monthly Fees: Buy once and own your cloud storage forever.
+- Complete Privacy: Your personal photos, videos, and confidential documents remain
+  on your own computer and local hard drives—never scanned or stored by big-tech corporations.
+- Unlimited Storage Expansion: Not restricted to 15GB or 100GB tiers. Expand your cloud
+  storage instantly by plugging in internal hard drives or external USB drives of any capacity.
+- Automated Mobile Backup: Seamlessly sync photos and videos from iPhone and Android devices.
+- Universal In-Browser Viewer: View and preview over 200+ file formats without third-party software.
+- Secure Remote Access: Access your home server from anywhere in the world using bundled 
+  Cloudflare Zero Trust encrypted tunnels without opening router ports.
+- 100% Native Windows Architecture: Runs directly on Windows with zero Docker or WSL requirements.
+
+
+2. KEY FEATURES & CAPABILITIES
+------------------------------
+* High-Performance Windows Engine:
+  - Multi-worker PHP 8.5 FastCGI process pool with OPcache and JIT acceleration.
+  - High-throughput Nginx 1.26 web server optimized for Windows I/O.
+  - SQLite database pre-configured in Write-Ahead-Log (WAL) mode with busy timeout handling.
+  - Self-healing supervisor that continuously monitors and automatically recovers services.
+
+* Universal File Viewer (200+ Formats Supported):
+  - Office: Word (.docx, .doc, .odt, .rtf), Excel (.xlsx, .xls, .csv, .ods), PowerPoint (.pptx, .ppt, .odp), PDF.
+  - Computer-Aided Design & 3D: AutoCAD (.dwg, .dxf), 3D Models (.obj, .stl, .gltf, .glb, .step, .ply).
+  - Media: Photos (JPG, PNG, WebP, SVG, TIFF, PSD, Apple HEIC/HEIF) and Videos (MP4, MKV, WebM, MOV, 4K ProRes).
+  - Code & Data: Python, JavaScript, TypeScript, HTML, CSS, JSON, XML, SQL, C++, C#, Java, Shell.
+  - Archives: .zip, .7z, .rar, .tar, .gz, .bz2, .xz, .iso.
+  - Notes & Diagrams: Markdown (.md), Mindmaps (.xmind), Draw.io (.drawio), Mermaid diagrams.
+
+* Storage & Drive Management:
+  - Dynamic Windows Drive Mounter: Mount entire drives (Drive D:, Drive E:) or specific folders with one click.
+  - Automatic thumbnail generation for all internal and connected external USB drives.
+
+* Role-Based Multi-User Management:
+  - Permanent Super Administrator account with full system governance.
+  - Granular additional user accounts with roles (Standard User, Editor, Viewer).
+  - Configurable storage quotas, drive mount permissions, and specific application access masks.
+
+* Zero Trust Remote Tunnel:
+  - Bundled Cloudflare Zero Trust client (cloudflared x64).
+  - Access your private cloud via your own custom domain (e.g. cloud.yourdomain.com).
+  - Automatic SSL certificates with zero router port forwarding and no static IP requirement.
+
+
+3. SYSTEM REQUIREMENTS
+----------------------
+- Operating System: Windows 10 (64-bit) or Windows 11 (64-bit)
+- Processor: Intel Core i3 / AMD Ryzen 3 or higher recommended
+- Memory (RAM): Minimum 4 GB (8 GB or more recommended for large media libraries)
+- Available Disk Space: Minimum 2 GB for application installation; additional space as needed for user data
+- Network: Local Area Network (Wi-Fi or Ethernet). Internet connection for remote access features.
+
+
+4. INSTALLATION & SETUP GUIDE
+-----------------------------
+1. Run "NextcloudServerSetup-x64.exe" (or "Sohoz Home Server by Nextcloud.exe").
+2. Choose your installation directory (default recommended: C:\NextcloudServer).
+3. Select preferred options:
+   - Create Desktop Shortcut
+   - Create Start Menu Shortcut
+   - Launch automatically when Windows starts
+4. Click "Install Now". The installer will extract all components and configure the system.
+5. Once complete, click "Launch Sohoz Home Server".
+
+
+5. LICENSE ACTIVATION GUIDE
+---------------------------
+Sohoz Home Server uses a single-device hardware-locked commercial licensing model:
+
+To Activate Your Software:
+1. Open the "Sohoz Home Server" desktop controller window.
+2. Click on the "🔑 License & Activation" tab.
+3. Locate your unique 16-character Windows Device ID (format: SHS-XXXX-XXXX-XXXX-XXXX).
+4. Click "💬 Send via WhatsApp" to send your Device ID directly to developer Rakib Mollah 
+   (+8801927432612), or click "📋 Copy Device ID" to send via email/message.
+5. Enter the 16-character License Key (format: SOZ-XXXX-XXXX-XXXX-XXXX) provided by the developer.
+6. Click "🔑 Activate Software". Your software is now permanently licensed on this computer.
+
+
+6. ACCESSING YOUR CLOUD STORAGE
+-------------------------------
+Once the server is running, open your web browser (Chrome, Edge, Firefox, Safari) and navigate to:
+- From this PC:        http://localhost:8080/
+- From your Local LAN:  http://[Your-PC-IP-Address]:8080/ (e.g., http://192.168.1.100:8080/)
+- From the Internet:    https://cloud.yourdomain.com/ (when Cloudflare Tunnel is connected)
+
+Default Administrator Credentials:
+- Username: admin (or your configured Super Admin username)
+- Password: admin (or your configured Super Admin password)
+
+Credentials and additional accounts can be managed anytime in the "Users & Passwords" tab.
+
+
+7. MOBILE INTEGRATION: IPHONE & ANDROID PHOTO BACKUP
+----------------------------------------------------
+You can use the official Nextcloud mobile application to replace Google Photos and iCloud:
+
+1. Install the "Nextcloud" app from Google Play Store (Android) or Apple App Store (iOS).
+2. Open the app and choose "Log in".
+3. Enter your server address:
+   - For home use: http://[Your-PC-Local-IP]:8080/
+   - For remote use: https://cloud.yourdomain.com/
+4. Enter your username and password, then approve the authorization request.
+5. In the mobile app settings, navigate to "Auto Upload" / "Instant Upload".
+6. Enable automatic upload for Camera photos and videos.
+7. Your phone will now automatically backup all photos and videos to your Windows PC hard drive.
+
+
+8. MOUNTING INTERNAL & EXTERNAL USB DRIVES
+------------------------------------------
+To make large storage drives accessible through the cloud:
+1. Open the desktop controller and switch to the "Storage & Drives" tab.
+2. Select any internal or external drive (e.g. Drive D:, Drive E:, or USB Drive).
+3. Click "Mount Selected Drive".
+4. To mount a specific folder, click "Mount Custom Windows Folder" and select the folder.
+5. The storage will immediately appear in your web cloud and mobile app.
+
+
+9. REMOTE INTERNET ACCESS (CLOUDFLARE ZERO TRUST)
+-------------------------------------------------
+To securely access your cloud from anywhere in the world:
+1. Register a domain name (via Cloudflare, Namecheap, GoDaddy, etc.).
+2. Go to the Cloudflare Zero Trust Dashboard: https://one.dash.cloudflare.com/
+3. Navigate to: Networks -> Tunnels -> Click "Add a Tunnel" (select Cloudflared).
+4. Name your tunnel and copy your unique Tunnel Token.
+5. Open the "Cloudflare Tunnel" tab in the Sohoz Home Server controller.
+6. Paste your Tunnel Token and enter your domain name (e.g., cloud.yourdomain.com).
+7. In the Cloudflare dashboard Public Hostname settings, point your domain to:
+   - Service: HTTP
+   - URL: localhost:8080
+8. Click "⚡ Connect Tunnel" in the desktop controller.
+9. Your private cloud is now live worldwide over secure HTTPS with free SSL.
+
+
+10. LICENSING, GNU AGPLv3 & TRADEMARK COMPLIANCE
+------------------------------------------------
+Sohoz Home Server operates under a dual-licensing architecture:
+
+- Open-Source Backend Core:
+  The Nextcloud web engine components are licensed under the GNU Affero General Public 
+  License Version 3 (GNU AGPLv3). In compliance with the AGPLv3, the Nextcloud PHP source 
+  code and modifications are included openly. See "nextcloud/COPYING" and "LICENSE.txt".
+
+- Proprietary Windows Controller:
+  The Windows desktop management application ("Sohoz Home Server by Nextcloud.exe"), 
+  service watchdog supervisor, drive mounter, setup installer, and licensing validation 
+  engine are proprietary software copyrighted (C) 2026 by Rakib Mollah / Sohoztech 
+  Software Solutions Bangladesh. Commercial license keys cover the usage and support 
+  of this proprietary Windows orchestration suite.
+
+- Trademark Disclaimers:
+  Nextcloud is a registered trademark of Nextcloud GmbH. Google Drive is a trademark 
+  of Google LLC. Microsoft OneDrive is a trademark of Microsoft Corporation. Apple iCloud 
+  is a trademark of Apple Inc. Sohoz Home Server is an independent software solution 
+  developed by Sohoztech Software Solutions and is not affiliated with, endorsed by, or 
+  sponsored by Nextcloud GmbH, Google LLC, Microsoft Corporation, or Apple Inc.
+
+
+11. DEVELOPER CREDENTIALS & TECHNICAL SUPPORT
+---------------------------------------------
+- Lead Architect & Developer: Rakib Mollah
+- Organization: Sohoztech Software Solutions Bangladesh
+- WhatsApp Support: +8801927432612
+- GitHub: https://github.com/SohoztechBangladesh
+- Developer Facebook: https://www.facebook.com/share/1CWVuNKVem/?mibextid=wwXIfr
+================================================================================

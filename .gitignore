@@ -1,0 +1,10 @@
+﻿# Ignored files
+*.exe
+*.dll
+*.zip
+*.7z
+*.log
+*.lic
+*.pid
+.vs/
+.vscode/

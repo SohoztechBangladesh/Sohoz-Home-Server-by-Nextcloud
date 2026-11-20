@@ -1,0 +1,92 @@
+================================================================================
+                    SOHOZ HOME SERVER - SOFTWARE LICENSE & NOTICES
+                 Publisher: Sohoztech Software Solutions Bangladesh
+                          Lead Developer: Rakib Mollah
+================================================================================
+
+1. OVERVIEW AND DUAL-LICENSING STRUCTURE
+----------------------------------------
+Sohoz Home Server is an integrated home cloud solution designed as a private,
+self-hosted alternative to third-party cloud storage providers such as Google
+Drive, Microsoft OneDrive, and Apple iCloud Drive.
+
+The software architecture consists of two distinct components:
+
+A. Nextcloud Server Core (Open-Source Backend Engine)
+B. Sohoz Home Server Windows Suite (Proprietary Manager & Orchestration Controller)
+
+
+2. NEXTCLOUD SERVER CORE (GNU AGPLv3)
+-------------------------------------
+The core server files located in the "nextcloud" directory are free and open-source
+software licensed under the GNU Affero General Public License Version 3 (GNU AGPLv3)
+as published by the Free Software Foundation.
+
+In accordance with the GNU AGPLv3:
+- The full text of the GNU Affero General Public License v3 is provided in the file:
+  nextcloud/COPYING
+- Any modifications made to the Nextcloud PHP scripts are distributed as source code
+  under the terms of the GNU AGPLv3.
+- You have the freedom to inspect, run, modify, and redistribute the Nextcloud core
+  server files under the terms of the GNU AGPLv3.
+
+
+3. SOHOZ WINDOWS CONTROLLER & SETUP SUITE (COMMERCIAL LICENSE)
+--------------------------------------------------------------
+The native Windows desktop controller ("Sohoz Home Server by Nextcloud.exe"), 
+the background service watchdog supervisor, the hardware-locked HMAC-SHA256 license 
+key validation engine, the automated drive mounting tools, and the single-file setup 
+installer are independent proprietary software created by Rakib Mollah and published
+by Sohoztech Software Solutions Bangladesh.
+
+Copyright (C) 2026 Rakib Mollah / Sohoztech Software Solutions Bangladesh.
+All Rights Reserved.
+
+- Commercial License Grant:
+  Each purchased 16-character license key (format: SOZ-XXXX-XXXX-XXXX-XXXX) grants 
+  a perpetual, lifetime, non-transferable license to operate the Sohoz Windows 
+  Controller suite on one (1) designated Windows hardware device (bound by Device ID).
+
+- Scope of Commercial License:
+  The commercial license covers the proprietary Windows orchestration software, 
+  automated desktop controls, lifetime device activation, and direct technical 
+  support provided by Sohoztech Software Solutions Bangladesh.
+
+
+4. THIRD-PARTY COMPONENTS & ATTRIBUTIONS
+----------------------------------------
+Sohoz Home Server bundles the following third-party components under their 
+respective open-source licenses:
+
+- Nginx Web Server: 2-Clause BSD License
+- PHP Engine: PHP License v3.01
+- SQLite Engine: Public Domain
+- Cloudflared Client: Apache License Version 2.0
+- FFmpeg Media Tool: GNU LGPL / GPL
+- Flyfish Universal File Viewer: MIT License
+- QRCoder Library: MIT License
+
+
+5. TRADEMARK & AFFILIATION DISCLAIMERS
+--------------------------------------
+- Nextcloud is a registered trademark of Nextcloud GmbH in Germany and/or other countries.
+- Google Drive is a trademark of Google LLC.
+- Microsoft OneDrive is a trademark of Microsoft Corporation.
+- Apple and iCloud are registered trademarks of Apple Inc.
+
+Sohoz Home Server is an independent software distribution and management suite
+developed by Sohoztech Software Solutions Bangladesh. This product is not affiliated
+with, endorsed by, sponsored by, or certified by Nextcloud GmbH, Google LLC,
+Microsoft Corporation, or Apple Inc. All other product names, logos, and brands
+are property of their respective owners.
+
+
+6. DEVELOPER CONTACT & OFFICIAL INQUIRIES
+-----------------------------------------
+For commercial licensing, custom deployments, or technical assistance:
+- Lead Developer: Rakib Mollah
+- Organization: Sohoztech Software Solutions Bangladesh
+- WhatsApp Support: +8801927432612
+- GitHub: https://github.com/SohoztechBangladesh
+- Facebook: https://www.facebook.com/share/1CWVuNKVem/?mibextid=wwXIfr
+================================================================================
