@@ -18,7 +18,15 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.3-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `F18089F71FA941CA8B85855DB64771536CEEE493C4C2C4F3F4B3F91E585DE1D5` |
+| `NextcloudServerSetup-v1.0.3-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `31C604AECEEE5DD3D6C3B92E8F2BB1EEC57B5168E9C766631B7FD256719758C5` |
+
+---
+
+## 🆕 What's New in v1.0.3 (Maintenance Release)
+
+* **Cloudflare Tunnel Mobile OAuth Fix:** Fixed mixed-content form submission blocking on iOS Safari and mobile webviews by dynamically resolving trusted proxy HTTPS headers (`X-Forwarded-Proto` and `HTTPS on`) in Nginx. The "Grant access" authorization button now completes pairing immediately.
+* **Atomic Super Administrator Update:** Fixed an issue where changing the Super Administrator username and password simultaneously skipped the password update. Both username and password now update atomically within a unified SQLite transaction.
+* **Password Visibility in UI:** Added password visibility controls across the Server Manager UI. Administrators can toggle plain-text visibility for both the Super Administrator and configured users using dedicated **👁 Show / Hide Passwords** buttons.
 
 ---
 
