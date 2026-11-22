@@ -1,6 +1,6 @@
 # ☁️ Sohoz Home Server by Nextcloud
 
-[![Release](https://img.shields.io/badge/Release-v1.0.3-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v1.0.4-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Architecture](https://img.shields.io/badge/Architecture-Native%20x64%20(No%20Docker%20%2F%20No%20WSL)-brightgreen.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![License](https://img.shields.io/badge/License-Commercial%20%2F%20Proprietary-orange.svg)](LICENSE.txt)
@@ -14,15 +14,25 @@
 
 Get the standalone 1-click Windows installer from our official GitHub Releases:
 
-👉 **[Download NextcloudServerSetup-v1.0.3-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.3 Standalone Setup Wizard)*
+👉 **[Download NextcloudServerSetup-v1.0.4-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.4 Standalone Setup Wizard)*
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.3-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `31C604AECEEE5DD3D6C3B92E8F2BB1EEC57B5168E9C766631B7FD256719758C5` |
+| `NextcloudServerSetup-v1.0.4-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `FA134523D87245E823A9CADD5FB14AEE04AFE7EAADD2691EE9D710D1CAA1BE68` |
 
 ---
 
-## 🆕 What's New in v1.0.3 (Maintenance Release)
+## 🆕 What's New in v1.0.4
+
+* **Automated Windows Defender Firewall Configuration:** Integrated seamless automatic firewall rule configuration during setup. Inbound rules are automatically registered for Nginx (`nginx.exe`), HTTP port `8080`, and the Server Controller on both Private and Public network profiles (`profile=any`). Eliminates the interactive "Windows Security: Windows Firewall has blocked some features of nginx" prompt completely.
+* **Administrator Elevation for Setup:** Enhanced the installer (`InstallerProgram.cs`) with standard UAC elevation so that all system components, firewall rules, and startup items install reliably with full administrative permissions.
+* **Clean Firewall Rule Uninstallation:** Uninstaller (`Uninstall.exe` and `Uninstall.cmd`) automatically purges all created firewall rules upon removal.
+* **Runtime Firewall Verification:** Server Manager supervisor automatically validates and ensures firewall permissions before starting Nginx.
+* **Code Optimization & Script Polish:** Resolved unused variable warnings in deployment scripts (`build_dist.ps1`) for clean compilation and packaging.
+
+---
+
+## 🆕 What's New in v1.0.3
 
 * **Cloudflare Tunnel Mobile OAuth Fix:** Fixed mixed-content form submission blocking on iOS Safari and mobile webviews by dynamically resolving trusted proxy HTTPS headers (`X-Forwarded-Proto` and `HTTPS on`) in Nginx. The "Grant access" authorization button now completes pairing immediately.
 * **Atomic Super Administrator Update:** Fixed an issue where changing the Super Administrator username and password simultaneously skipped the password update. Both username and password now update atomically within a unified SQLite transaction.
@@ -57,7 +67,7 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 ## 🚀 Quick Start & Installation
 
-1. **Download:** Download `NextcloudServerSetup-v1.0.3-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
+1. **Download:** Download `NextcloudServerSetup-v1.0.4-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
 2. **Install:** Run the installer as Administrator. Select your desired installation directory (Default: `C:\Program Files\Sohoz Nextcloud Server`).
 3. **Launch:** Click **Install Now**. Once extraction is complete, launch the server from the Desktop shortcut.
 4. **Dashboard:** Access the local management dashboard via system tray or browser at `http://localhost:8080`.
