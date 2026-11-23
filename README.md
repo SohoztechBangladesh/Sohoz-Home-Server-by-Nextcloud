@@ -1,6 +1,6 @@
-# ☁️ Sohoz Home Server by Nextcloud
+# ☁️ Sohoz Home Server Powered by Nextcloud
 
-[![Release](https://img.shields.io/badge/Release-v1.0.6-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v1.0.7-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Architecture](https://img.shields.io/badge/Architecture-Native%20x64%20(No%20Docker%20%2F%20No%20WSL)-brightgreen.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![License](https://img.shields.io/badge/License-Commercial%20%2F%20Proprietary-orange.svg)](LICENSE.txt)
@@ -14,11 +14,20 @@
 
 Get the standalone 1-click Windows installer from our official GitHub Releases:
 
-👉 **[Download NextcloudServerSetup-v1.0.6-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.6 Standalone Setup Wizard)*
+👉 **[Download NextcloudServerSetup-v1.0.7-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.7 Standalone Setup Wizard)*
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.6-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `3D48CA71546A9C461706E1E397EBA93F1EAE3EE8CC2A29DB5F8A717F7EA2A8A8` |
+| `NextcloudServerSetup-v1.0.7-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `7CD4AC04422BED6B31B7D5E90BBAEF54F68A57FB240AADE13664A1CF33CA3A26` |
+
+---
+
+## 🆕 What's New in v1.0.7
+
+* **Official Trademark & Legal Fair-Use Alignment:** Fully rebranded the solution to **"Sohoz Home Server Powered by Nextcloud"** across the Windows Server Manager UI, Setup Wizard, Uninstaller, System Tray Controller, Desktop Shortcuts, Registry definitions, and Internal Assembly Metadata. This strictly complies with Nextcloud GmbH trademark guidelines and open-source nominative fair-use principles, clarifying that Nextcloud powers the backend engine while Sohoztech Software Solutions provides the proprietary Windows orchestration platform.
+* **Verified Publisher Authenticode Digital Signature:** Digitally signed all executables and the master setup wizard (`NextcloudServerSetup-v1.0.7-x64.exe`) with the verified Authenticode certificate for **Sohoztech Software Solutions Bangladesh**, eliminating "Unknown Publisher" warnings on Windows 10 and 11.
+* **Single-File PE Architecture with Embedded Payload:** High-performance direct PE embedded resource extraction guaranteeing complete digital signature validity, atomic single-file distribution, and zero overlay corruption.
+* **Automated Firewall & Security Profile:** Automated Inbound/Outbound firewall rules for Cloudflare Tunnel, Nginx, PHP-CGI, and TCP port 8080.
 
 ---
 
@@ -36,23 +45,6 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 * **Cloudflare Zero Trust & Nginx Firewall Automation:** Added complete automatic inbound and outbound Windows Defender Firewall rules for **Cloudflare Tunnel (`cloudflared.exe`)**, **Nginx (`nginx.exe`)**, **PHP FastCGI (`php-cgi.exe`)**, **PHP CLI (`php.exe`)**, and **HTTP Port 8080** across both Private and Public network profiles (`profile=any`). Completely eliminates the interactive *"Windows Security: Windows Firewall has blocked some features of cloudflared / nginx"* security prompt on Windows 10 and 11.
 * **Full-Stack Firewall Lifecycle Integration:** Automated rule creation on setup, automatic cleanup in Uninstaller (`Uninstall.exe` and `Uninstall.cmd`), and proactive silent validation prior to spawning cloudflared or Nginx in the server manager runtime.
 * **Streamlined Setup Elevation:** Refined installer UAC self-elevation ensuring all networking configurations, firewall permissions, desktop shortcuts, and autostart registry items install seamlessly with zero privilege friction.
-* **Antigravity Diagnostics Cleanup:** Zero warnings, zero unused variables, and 100% clean compilation across all build, packaging, and runtime scripts.
-
----
-
-## 🆕 What's New in v1.0.4
-
-* **Automated Windows Defender Firewall Configuration:** Integrated seamless automatic firewall rule configuration during setup. Inbound rules are automatically registered for Nginx (`nginx.exe`), HTTP port `8080`, and the Server Controller on both Private and Public network profiles (`profile=any`).
-* **Administrator Elevation for Setup:** Enhanced the installer (`InstallerProgram.cs`) with standard UAC elevation so that all system components, firewall rules, and startup items install reliably with full administrative permissions.
-* **Clean Firewall Rule Uninstallation:** Uninstaller (`Uninstall.exe` and `Uninstall.cmd`) automatically purges all created firewall rules upon removal.
-
----
-
-## 🆕 What's New in v1.0.3
-
-* **Cloudflare Tunnel Mobile OAuth Fix:** Fixed mixed-content form submission blocking on iOS Safari and mobile webviews by dynamically resolving trusted proxy HTTPS headers (`X-Forwarded-Proto` and `HTTPS on`) in Nginx. The "Grant access" authorization button now completes pairing immediately.
-* **Atomic Super Administrator Update:** Fixed an issue where changing the Super Administrator username and password simultaneously skipped the password update. Both username and password now update atomically within a unified SQLite transaction.
-* **Password Visibility in UI:** Added password visibility controls across the Server Manager UI. Administrators can toggle plain-text visibility for both the Super Administrator and configured users using dedicated **👁 Show / Hide Passwords** buttons.
 
 ---
 
@@ -83,7 +75,7 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 ## 🚀 Quick Start & Installation
 
-1. **Download:** Download `NextcloudServerSetup-v1.0.6-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
+1. **Download:** Download `NextcloudServerSetup-v1.0.7-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
 2. **Install:** Run the installer as Administrator. Select your desired installation directory (Default: `C:\Program Files\Sohoz Nextcloud Server`).
 3. **Launch:** Click **Install Now**. Once extraction is complete, launch the server from the Desktop shortcut.
 4. **Dashboard:** Access the local management dashboard via system tray or browser at `http://localhost:8080`.
@@ -95,7 +87,7 @@ For complete deployment details, refer to the [USER_MANUAL.txt](USER_MANUAL.txt)
 
 ## 🔑 Licensing & Software Activation
 
-**Sohoz Home Server by Nextcloud** is proprietary software distributed as a closed-source solution. The Windows desktop orchestration supervisor, system tray controller, drive mounter, and hardware-bound license engine are proprietary software developed by **Rakib Mollah** and published by **Sohoztech Software Solutions Bangladesh**.
+**Sohoz Home Server Powered by Nextcloud** is proprietary software distributed as a closed-source solution. The Windows desktop orchestration supervisor, system tray controller, drive mounter, and hardware-bound license engine are proprietary software developed by **Rakib Mollah** and published by **Sohoztech Software Solutions Bangladesh**.
 
 To unlock full lifetime operation on your machine, a hardware-bound license key is required.
 
@@ -115,4 +107,4 @@ To acquire a valid lifetime license key for your device:
 * **Dual-Licensing Structure:** The core server engine utilizes Nextcloud Server Core licensed under the GNU Affero General Public License Version 3 (GNU AGPLv3). In strict compliance with AGPLv3, Nextcloud core source files and license notices remain accessible.
 * **Proprietary Components:** The Windows Controller suite, setup installer, background supervisor, and drive orchestration tools are proprietary commercial works owned by Rakib Mollah / Sohoztech Software Solutions Bangladesh.
 * **Security & Distribution Policy:** In compliance with GitHub Acceptable Use Policies and Terms of Service, this public repository contains exclusively verified, official release assets and public documentation. No internal key generators, private signing tools, or security bypass mechanisms are hosted in this public repository.
-* **Trademarks:** Nextcloud is a registered trademark of Nextcloud GmbH. Google Drive, Microsoft OneDrive, and Apple iCloud are trademarks of their respective owners. Sohoz Home Server is an independent solution and is not affiliated with or endorsed by these entities.
+* **Trademarks & Nominative Fair Use:** Nextcloud is a registered trademark of Nextcloud GmbH. "Sohoz Home Server Powered by Nextcloud" uses "Nextcloud" solely nominatively to indicate the underlying software engine powering the system. Sohoztech Software Solutions is an independent organization and is not affiliated with, endorsed by, or sponsored by Nextcloud GmbH, Google LLC, Microsoft Corporation, or Apple Inc.

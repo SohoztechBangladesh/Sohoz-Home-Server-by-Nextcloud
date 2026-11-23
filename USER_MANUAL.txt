@@ -67,7 +67,7 @@ With Sohoz Home Server, you retain 100% physical ownership and privacy of your d
 
 4. INSTALLATION & SETUP GUIDE
 -----------------------------
-1. Run "NextcloudServerSetup-x64.exe" (or "Sohoz Home Server by Nextcloud.exe").
+1. Run "NextcloudServerSetup-x64.exe" (or "Sohoz Home Server Powered by Nextcloud.exe").
 2. Choose your installation directory (default recommended: C:\NextcloudServer).
 3. Select preferred options:
    - Create Desktop Shortcut
@@ -156,7 +156,7 @@ Sohoz Home Server operates under a dual-licensing architecture:
   code and modifications are included openly. See "nextcloud/COPYING" and "LICENSE.txt".
 
 - Proprietary Windows Controller:
-  The Windows desktop management application ("Sohoz Home Server by Nextcloud.exe"), 
+  The Windows desktop management application ("Sohoz Home Server Powered by Nextcloud.exe"), 
   service watchdog supervisor, drive mounter, setup installer, and licensing validation 
   engine are proprietary software copyrighted (C) 2026 by Rakib Mollah / Sohoztech 
   Software Solutions Bangladesh. Commercial license keys cover the usage and support 

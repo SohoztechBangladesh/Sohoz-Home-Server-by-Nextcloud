@@ -33,7 +33,7 @@ In accordance with the GNU AGPLv3:
 
 3. SOHOZ WINDOWS CONTROLLER & SETUP SUITE (COMMERCIAL LICENSE)
 --------------------------------------------------------------
-The native Windows desktop controller ("Sohoz Home Server by Nextcloud.exe"), 
+The native Windows desktop controller ("Sohoz Home Server Powered by Nextcloud.exe"), 
 the background service watchdog supervisor, the hardware-locked HMAC-SHA256 license 
 key validation engine, the automated drive mounting tools, and the single-file setup 
 installer are independent proprietary software created by Rakib Mollah and published
