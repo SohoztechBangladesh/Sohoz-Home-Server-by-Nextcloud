@@ -1,6 +1,6 @@
 # ☁️ Sohoz Home Server by Nextcloud
 
-[![Release](https://img.shields.io/badge/Release-v1.0.4-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v1.0.5-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Architecture](https://img.shields.io/badge/Architecture-Native%20x64%20(No%20Docker%20%2F%20No%20WSL)-brightgreen.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![License](https://img.shields.io/badge/License-Commercial%20%2F%20Proprietary-orange.svg)](LICENSE.txt)
@@ -14,21 +14,28 @@
 
 Get the standalone 1-click Windows installer from our official GitHub Releases:
 
-👉 **[Download NextcloudServerSetup-v1.0.4-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.4 Standalone Setup Wizard)*
+👉 **[Download NextcloudServerSetup-v1.0.5-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.5 Standalone Setup Wizard)*
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.4-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `FA134523D87245E823A9CADD5FB14AEE04AFE7EAADD2691EE9D710D1CAA1BE68` |
+| `NextcloudServerSetup-v1.0.5-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `DB0B7289FB848CC0145B060BD26C260EA29A4B25D76EBEDD4B6D6AEBF82A2016` |
+
+---
+
+## 🆕 What's New in v1.0.5
+
+* **Cloudflare Zero Trust & Nginx Firewall Automation:** Added complete automatic inbound and outbound Windows Defender Firewall rules for **Cloudflare Tunnel (`cloudflared.exe`)**, **Nginx (`nginx.exe`)**, **PHP FastCGI (`php-cgi.exe`)**, **PHP CLI (`php.exe`)**, and **HTTP Port 8080** across both Private and Public network profiles (`profile=any`). Completely eliminates the interactive *"Windows Security: Windows Firewall has blocked some features of cloudflared / nginx"* security prompt on Windows 10 and 11.
+* **Full-Stack Firewall Lifecycle Integration:** Automated rule creation on setup, automatic cleanup in Uninstaller (`Uninstall.exe` and `Uninstall.cmd`), and proactive silent validation prior to spawning cloudflared or Nginx in the server manager runtime.
+* **Streamlined Setup Elevation:** Refined installer UAC self-elevation ensuring all networking configurations, firewall permissions, desktop shortcuts, and autostart registry items install seamlessly with zero privilege friction.
+* **Antigravity Diagnostics Cleanup:** Zero warnings, zero unused variables, and 100% clean compilation across all build, packaging, and runtime scripts.
 
 ---
 
 ## 🆕 What's New in v1.0.4
 
-* **Automated Windows Defender Firewall Configuration:** Integrated seamless automatic firewall rule configuration during setup. Inbound rules are automatically registered for Nginx (`nginx.exe`), HTTP port `8080`, and the Server Controller on both Private and Public network profiles (`profile=any`). Eliminates the interactive "Windows Security: Windows Firewall has blocked some features of nginx" prompt completely.
+* **Automated Windows Defender Firewall Configuration:** Integrated seamless automatic firewall rule configuration during setup. Inbound rules are automatically registered for Nginx (`nginx.exe`), HTTP port `8080`, and the Server Controller on both Private and Public network profiles (`profile=any`).
 * **Administrator Elevation for Setup:** Enhanced the installer (`InstallerProgram.cs`) with standard UAC elevation so that all system components, firewall rules, and startup items install reliably with full administrative permissions.
 * **Clean Firewall Rule Uninstallation:** Uninstaller (`Uninstall.exe` and `Uninstall.cmd`) automatically purges all created firewall rules upon removal.
-* **Runtime Firewall Verification:** Server Manager supervisor automatically validates and ensures firewall permissions before starting Nginx.
-* **Code Optimization & Script Polish:** Resolved unused variable warnings in deployment scripts (`build_dist.ps1`) for clean compilation and packaging.
 
 ---
 
@@ -67,7 +74,7 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 ## 🚀 Quick Start & Installation
 
-1. **Download:** Download `NextcloudServerSetup-v1.0.4-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
+1. **Download:** Download `NextcloudServerSetup-v1.0.5-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
 2. **Install:** Run the installer as Administrator. Select your desired installation directory (Default: `C:\Program Files\Sohoz Nextcloud Server`).
 3. **Launch:** Click **Install Now**. Once extraction is complete, launch the server from the Desktop shortcut.
 4. **Dashboard:** Access the local management dashboard via system tray or browser at `http://localhost:8080`.
