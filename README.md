@@ -1,6 +1,6 @@
 # ☁️ Sohoz Home Server Powered by Nextcloud
 
-[![Release](https://img.shields.io/badge/Release-v1.0.7-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v1.0.8-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Architecture](https://img.shields.io/badge/Architecture-Native%20x64%20(No%20Docker%20%2F%20No%20WSL)-brightgreen.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![License](https://img.shields.io/badge/License-Commercial%20%2F%20Proprietary-orange.svg)](LICENSE.txt)
@@ -14,11 +14,22 @@
 
 Get the standalone 1-click Windows installer from our official GitHub Releases:
 
-👉 **[Download NextcloudServerSetup-v1.0.7-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.7 Standalone Setup Wizard)*
+👉 **[Download NextcloudServerSetup-v1.0.8-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.8 Standalone Setup Wizard)*
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.7-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `7CD4AC04422BED6B31B7D5E90BBAEF54F68A57FB240AADE13664A1CF33CA3A26` |
+| `NextcloudServerSetup-v1.0.8-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `D30E006EA0B2599DDAB0EBFDD19AFFDABE7F64BAC841A92B3089B53E05AFA004` |
+
+---
+
+## 🆕 What's New in v1.0.8
+
+* **Automated Autostart & Seamless System Tray Minimization:** Resolved the issue where the application would not start automatically minimized to the system tray upon Windows power on or device reboot. Implemented a zero-flicker native WinForms lifecycle hook (`SetVisibleCore` override) ensuring the window handle initializes without showing or flashing on boot.
+* **Full Windows 10/11 StartupApproved Registry Integration:** Added programmatic registration for `HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run` with binary state `0x02` (Enabled). This actively prevents Windows 10/11 Task Manager and Explorer from marking the autostart entry as suppressed or disabled across system restarts.
+* **Multi-Layer Startup Redundancy:** Configured multi-tier autostart fallback including Registry `HKCU\...\Run`, User Startup Folder shortcut (`Environment.SpecialFolder.Startup`) with `--minimized` arguments and minimized window style (7), and optional elevated `HKLM\...\Run`.
+* **Inter-Process Window Restoration:** Added broadcast window message handler (`SOHOZ_HOME_SERVER_RESTORE_WINDOW`) allowing secondary launches (e.g. desktop shortcut clicks) to instantly awaken and restore hidden system tray instances.
+* **Settings Persistence:** Connected `chkStartMinimized` and `chkAutoStart` settings to Windows Registry (`HKCU\Software\Sohoztech\SohozHomeServer\StartMinimized`).
+* **Verified Publisher Authenticode Digital Signature:** Digitally signed all executables and the master setup wizard (`NextcloudServerSetup-v1.0.8-x64.exe`) with the verified Authenticode certificate for **Sohoztech Software Solutions Bangladesh**.
 
 ---
 
@@ -75,7 +86,7 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 ## 🚀 Quick Start & Installation
 
-1. **Download:** Download `NextcloudServerSetup-v1.0.7-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
+1. **Download:** Download `NextcloudServerSetup-v1.0.8-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
 2. **Install:** Run the installer as Administrator. Select your desired installation directory (Default: `C:\Program Files\Sohoz Nextcloud Server`).
 3. **Launch:** Click **Install Now**. Once extraction is complete, launch the server from the Desktop shortcut.
 4. **Dashboard:** Access the local management dashboard via system tray or browser at `http://localhost:8080`.
