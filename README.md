@@ -1,6 +1,6 @@
 # ☁️ Sohoz Home Server by Nextcloud
 
-[![Release](https://img.shields.io/badge/Release-v1.0.5-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v1.0.6-blue.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-0078D6.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![Architecture](https://img.shields.io/badge/Architecture-Native%20x64%20(No%20Docker%20%2F%20No%20WSL)-brightgreen.svg)](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)
 [![License](https://img.shields.io/badge/License-Commercial%20%2F%20Proprietary-orange.svg)](LICENSE.txt)
@@ -14,11 +14,20 @@
 
 Get the standalone 1-click Windows installer from our official GitHub Releases:
 
-👉 **[Download NextcloudServerSetup-v1.0.5-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.5 Standalone Setup Wizard)*
+👉 **[Download NextcloudServerSetup-v1.0.6-x64.exe](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest)** *(v1.0.6 Standalone Setup Wizard)*
 
 | File | Size | Architecture | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| `NextcloudServerSetup-v1.0.5-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `DB0B7289FB848CC0145B060BD26C260EA29A4B25D76EBEDD4B6D6AEBF82A2016` |
+| `NextcloudServerSetup-v1.0.6-x64.exe` | ~531 MB | Windows 10 / 11 (64-bit) | `3D48CA71546A9C461706E1E397EBA93F1EAE3EE8CC2A29DB5F8A717F7EA2A8A8` |
+
+---
+
+## 🆕 What's New in v1.0.6
+
+* **Verified Publisher Authenticode Digital Code Signing:** Digitally signed all executable binaries and the master setup installer (`NextcloudServerSetup-v1.0.6-x64.exe`) with the official Authenticode digital signature for **Sohoztech Software Solutions Bangladesh**.
+* **Eliminated "Unknown Publisher" Security Prompt:** Resolves Windows Open File Security Warning (`Zone.Identifier` Mark-of-the-Web) and SmartScreen publisher verification dialogs. Windows now recognizes the legitimate publisher identity as **Sohoztech Software Solutions Bangladesh** instead of *"Unknown Publisher"*.
+* **Single-File PE Architecture with Embedded Payload:** Re-architected the packaging engine to compile the entire server runtime payload directly as an embedded PE resource using the native 64-bit C# compiler. Eliminates overlay data appending, guaranteeing 100% Authenticode digital signature validity, checksum integrity, and seamless stream extraction.
+* **Automated Publisher Certificate Trust:** Integrated automated registration of the verified publisher security credentials (`tools\Sohoztech_CodeSigning.cer`) into the Windows Trusted Publisher certificate store during setup.
 
 ---
 
@@ -74,7 +83,7 @@ Get the standalone 1-click Windows installer from our official GitHub Releases:
 
 ## 🚀 Quick Start & Installation
 
-1. **Download:** Download `NextcloudServerSetup-v1.0.5-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
+1. **Download:** Download `NextcloudServerSetup-v1.0.6-x64.exe` from the [Releases](https://github.com/SohoztechBangladesh/Sohoz-Home-Server-by-Nextcloud/releases/latest) section.
 2. **Install:** Run the installer as Administrator. Select your desired installation directory (Default: `C:\Program Files\Sohoz Nextcloud Server`).
 3. **Launch:** Click **Install Now**. Once extraction is complete, launch the server from the Desktop shortcut.
 4. **Dashboard:** Access the local management dashboard via system tray or browser at `http://localhost:8080`.
